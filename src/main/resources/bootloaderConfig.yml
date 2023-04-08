@@ -1,0 +1,18 @@
+Bootloader:
+  jarFilePath: ""
+  oldJarFilePath: ""
+  # Arguments for java execution
+  preArguments: []
+  postArguments: []
+
+
+
+Jenkins:
+  #Used for getting the latest artifact build from JENKINS I did not test if works without authentication
+  useJenkins: false
+  server: ""
+  user: ""
+  token: ""
+  projectName: ""
+  #This is used if your jenkins file can't download the artifact without an authorization
+  downloadToken: ""

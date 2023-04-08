@@ -1,0 +1,29 @@
+
+<configuration>
+  <timestamp key="bySec" datePattern="dd-MM-yyyy"/>
+  <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+    <!-- encoders are assigned the type
+         ch.qos.logback.classic.encoder.PatternLayoutEncoder by default -->
+    <encoder>
+      <pattern>%d{HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n</pattern>
+    </encoder>
+    <file>logs/${bySec}.log</file>
+    <append>true</append>
+  </appender>
+  <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+  <filter class="ch.qos.logback.classic.filter.LevelFilter">
+     <level>DEBUG</level>
+     <onMatch>DENY</onMatch>
+     <onMismatch>ACCEPT</onMismatch>
+  </filter>
+    <!-- encoders are assigned the type
+         ch.qos.logback.classic.encoder.PatternLayoutEncoder by default -->
+    <encoder>
+      <pattern>%red(%d{HH:mm:ss}) %boldCyan([%thread]) %highlight(%-5level) %boldGreen(%logger{36}) - %msg%n</pattern>
+    </encoder>
+  </appender>
+  <root level="debug">
+    <appender-ref ref="STDOUT" />
+    <appender-ref ref="FILE" />
+  </root>
+</configuration>
