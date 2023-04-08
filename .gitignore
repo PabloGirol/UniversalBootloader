@@ -27,7 +27,7 @@ hs_err_pid*
 build/
 
 #Custom files and directories added by me
-config.yml
+bootloaderConfig.yml
 .idea/
 *.iml
 *.ipr
