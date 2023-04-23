@@ -118,6 +118,7 @@ public class Bootstrap {
         //Fetch the custom arguments for the bot's initialization
         BOT_START_COMMAND.addAll(Arrays.asList(config.getStringArray("Bootloader.preArguments")));
         BOT_START_COMMAND.add("-jar");
+        BOT_START_COMMAND.add(BOT_JAR_FILE.getPath());
         BOT_START_COMMAND.addAll(Arrays.asList(config.getStringArray("Bootloader.postArguments")));
 
         //Start the bot
@@ -203,7 +204,7 @@ public class Bootstrap {
                     LOGGER.info(String.format("Intentando descargar actualization, Intento %s, Espere...\n", (i+1)));
 
                 }
-                Downloader.file(LATEST_BUILD_BASE_URL + jarfile, BOT_JAR_FILE.getName());
+                Downloader.file(LATEST_BUILD_BASE_URL + jarfile, BOT_JAR_FILE.getAbsolutePath());
                 if(BOT_JAR_FILE.exists()){
                     LOGGER.info("Actualización descargada con éxito");
                     return true;
