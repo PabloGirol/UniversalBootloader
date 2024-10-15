@@ -16,7 +16,7 @@ repositories {
 shadowJar.archiveFileName = "Bootloader.jar"
 
 dependencies {
-    implementation group: 'ch.qos.logback', name: 'logback-classic', version: '1.5.10'
+    implementation group: 'ch.qos.logback', name: 'logback-classic', version: '1.5.11'
     implementation group: 'com.offbytwo.jenkins', name: 'jenkins-client', version:'0.3.8'
     implementation group: 'com.squareup.okhttp3', name: 'okhttp', version: '4.12.0'
     implementation group: 'org.apache.commons', name: 'commons-configuration2', version: '2.11.0'
