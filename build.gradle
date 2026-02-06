@@ -25,7 +25,7 @@ shadowJar {
 }
 
 dependencies {
-    implementation group: 'ch.qos.logback', name: 'logback-classic', version: '1.5.27'
+    implementation group: 'ch.qos.logback', name: 'logback-classic', version: '1.5.28'
     implementation group: 'com.offbytwo.jenkins', name: 'jenkins-client', version:'0.3.8'
     implementation group: 'com.squareup.okhttp3', name: 'okhttp', version: '5.3.2'
     implementation group: 'org.apache.commons', name: 'commons-configuration2', version: '2.13.0'
